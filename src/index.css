@@ -4,57 +4,15 @@
 @import "@fontsource-variable/geist";
 @import "@fontsource-variable/space-grotesk";
 
+/* Colour theme: import exactly one. To go back to the original blue & navy colours,
+   swap this line for: @import "./themes/blue-navy.css"; */
+@import "./themes/emerald-charcoal.css";
+
 @custom-variant dark (&:is(.dark *));
-
-:root {
-    /* Brand colour identity: Electric Blue #0066FF, Deep Navy #0B1220, Electric Cyan #00D4FF,
-       Neutral Grey #6B7280, Light Grey #F3F4F6. Muted text uses a darker grey (#4B5563) because
-       #6B7280 is only 4.3:1 on Light Grey, below WCAG AA for body text. */
-    --background: #f3f4f6;
-    --foreground: #0b1220;
-    --card: #ffffff;
-    --card-foreground: #0b1220;
-    --popover: #ffffff;
-    --popover-foreground: #0b1220;
-    --primary: #0066ff;
-    --primary-foreground: #ffffff;
-    --secondary: #e5e7eb;
-    --secondary-foreground: #0b1220;
-    --muted: #e5e7eb;
-    --muted-foreground: #4b5563;
-    --accent: #e5e7eb;
-    --accent-foreground: #0b1220;
-    --destructive: oklch(0.577 0.245 27.325);
-    --border: #d1d5db;
-    --input: #9ca3af;
-    --ring: #0066ff;
-    --radius: 0.5rem;
-}
-
-.dark {
-    --background: #0b1220;
-    --foreground: #f3f4f6;
-    --card: #121c2d;
-    --card-foreground: #f3f4f6;
-    --popover: #121c2d;
-    --popover-foreground: #f3f4f6;
-    --primary: #0066ff;
-    --primary-foreground: #ffffff;
-    --secondary: #1a2638;
-    --secondary-foreground: #f3f4f6;
-    --muted: #1a2638;
-    --muted-foreground: #9ca3af;
-    --accent: #1a2638;
-    --accent-foreground: #f3f4f6;
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: rgb(255 255 255 / 10%);
-    --input: rgb(255 255 255 / 18%);
-    --ring: #00d4ff;
-}
 
 @theme {
     --color-navy: #0b1220;
-    --color-navy-2: #121c2d; /* one step lighter than Deep Navy, for layering dark sections */
+    --color-navy-2: #121c2d; /* defaults only: the imported theme file sets the live values */
     --color-electric: #0066ff;
     --color-cyan: #00d4ff;
     --animate-signal: signal 3.2s linear infinite;

@@ -1,0 +1,61 @@
+/* Theme: Emerald & Charcoal (current brand colour identity).
+   Emerald #059669, Forest #064E3B, Mint #10B981, Charcoal #1F2937, Off-white #F3F4F6.
+
+   Contrast pairings (WCAG AA needs 4.5:1 for body-size text):
+   - Light sections: buttons/links are Forest with white text (9.7:1). White on Emerald is only
+     3.8:1, and Emerald text on Off-white 3.4:1, so Emerald is used for icons, dots and lines (3:1 rule).
+   - Dark sections use the original Deep Navy backgrounds (#0B1220, raised #121C2D).
+   - Buttons on navy are Mint with Charcoal text (5.8:1); Mint is the bright accent.
+   - Muted text is a darker grey (#4B5563) for 7:1 on Off-white.
+   To use: import this file in src/index.css (only one theme import at a time). */
+
+:root {
+    /* Utility colours keep their original role names: "navy" = dark surface,
+       "navy-2" = raised dark surface, "electric" = brand accent (icons, lines),
+       "cyan" = bright accent on dark surfaces. */
+    --color-navy: #0b1220;
+    --color-navy-2: #121c2d;
+    --color-electric: #059669;
+    --color-cyan: #10b981;
+
+    --background: #f3f4f6;
+    --foreground: #1f2937;
+    --card: #ffffff;
+    --card-foreground: #1f2937;
+    --popover: #ffffff;
+    --popover-foreground: #1f2937;
+    --primary: #064e3b;
+    --primary-foreground: #ffffff;
+    --secondary: #e5e7eb;
+    --secondary-foreground: #1f2937;
+    --muted: #e5e7eb;
+    --muted-foreground: #4b5563;
+    --accent: #e5e7eb;
+    --accent-foreground: #1f2937;
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: #d1d5db;
+    --input: #9ca3af;
+    --ring: #059669;
+    --radius: 0.5rem;
+}
+
+.dark {
+    --background: #0b1220;
+    --foreground: #f3f4f6;
+    --card: #121c2d;
+    --card-foreground: #f3f4f6;
+    --popover: #121c2d;
+    --popover-foreground: #f3f4f6;
+    --primary: #10b981;
+    --primary-foreground: #1f2937;
+    --secondary: #1a2638;
+    --secondary-foreground: #f3f4f6;
+    --muted: #1a2638;
+    --muted-foreground: #9ca3af;
+    --accent: #1a2638;
+    --accent-foreground: #f3f4f6;
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: rgb(255 255 255 / 10%);
+    --input: rgb(255 255 255 / 18%);
+    --ring: #10b981;
+}

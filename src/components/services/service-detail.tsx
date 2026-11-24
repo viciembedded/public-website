@@ -24,7 +24,7 @@ export function ServiceDetail({ service }: { service: Service }) {
       className="grid scroll-mt-24 gap-8 border-t py-14 first:border-t-0 first:pt-0 md:grid-cols-[1fr_1.4fr] md:gap-16"
     >
       <div>
-        <Icon aria-hidden="true" className="size-8 text-primary" stroke={1.5} />
+        <Icon aria-hidden="true" className="size-8 text-electric" stroke={1.5} />
         <h2
           id={`${id}-title`}
           className="mt-5 text-2xl font-semibold tracking-tight sm:text-3xl"

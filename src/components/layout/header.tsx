@@ -98,7 +98,7 @@ export function Header() {
 
         <Link
           href="/contact"
-          className="group relative isolate hidden items-center gap-2.5 justify-self-end overflow-hidden rounded-full border border-white/20 bg-white/5 py-1.5 pr-1.5 pl-4 text-sm font-medium transition-colors duration-500 outline-none hover:border-primary focus-visible:border-primary focus-visible:ring-3 focus-visible:ring-cyan/60 md:inline-flex"
+          className="group relative isolate hidden items-center gap-2.5 justify-self-end overflow-hidden rounded-full border border-white/20 bg-white/5 py-1.5 pr-1.5 pl-4 text-sm font-medium transition-colors duration-500 outline-none hover:border-primary hover:text-primary-foreground focus-visible:border-primary focus-visible:text-primary-foreground focus-visible:ring-3 focus-visible:ring-cyan/60 md:inline-flex"
         >
           {/* Fill: a copy of the icon's circle that grows from behind it to cover the pill on hover/focus. */}
           <span

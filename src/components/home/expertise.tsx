@@ -28,7 +28,7 @@ export function Expertise() {
               <div className="flex items-center justify-between gap-4">
                 <Icon
                   aria-hidden="true"
-                  className="size-7 text-primary transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110"
+                  className="size-7 text-electric transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110"
                   stroke={1.5}
                 />
                 <StatusBadge status={status} />
