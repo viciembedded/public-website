@@ -11,10 +11,13 @@ export function ContactPage() {
 
   return (
     <>
-      <PageHero eyebrow="Get in touch" title="Let's build something meaningful.">
+      <PageHero
+        eyebrow="Get in touch"
+        title="Let's build something meaningful."
+      >
         <p>
-          Have a product idea, engineering challenge or software requirement?
-          We would like to hear about it.
+          Have a product idea, engineering challenge or software requirement? We
+          would like to hear about it.
         </p>
         <p>
           Whether you are an individual, startup, business or organization,
@@ -34,9 +37,9 @@ export function ContactPage() {
               </h2>
               {/* Placeholder privacy notice: confirm wording before launch. */}
               <p className="mt-3">
-                We use the details you submit only to review and respond to
-                your enquiry. We don't add you to mailing lists or share your
-                details with third parties for marketing.
+                We use the details you submit only to review and respond to your
+                enquiry. We don't add you to mailing lists or share your details
+                with third parties for marketing.
               </p>
             </div>
           </aside>

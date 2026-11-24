@@ -1,6 +1,7 @@
 import { ProductsEmpty } from "@/components/products/products-empty"
 import { Section, SectionHeading } from "@/components/sections/section"
 import { ButtonLink } from "@/components/ui/button-link"
+import { Reveal } from "@/components/ui/reveal"
 
 export function ProductsTeaser() {
   return (
@@ -22,17 +23,19 @@ export function ProductsTeaser() {
             technologies we are bringing to market.
           </p>
         </SectionHeading>
-        <ProductsEmpty
-          title="Our product portfolio is in development."
-          action={
-            <ButtonLink href="/products" variant="outline" onDark>
-              Explore Our Products
-            </ButtonLink>
-          }
-        >
-          We are working on technology designed to address practical needs.
-          Check back as we introduce our products.
-        </ProductsEmpty>
+        <Reveal delay={0.15}>
+          <ProductsEmpty
+            title="Our product portfolio is in development."
+            action={
+              <ButtonLink href="/products" variant="outline" onDark>
+                Explore Our Products
+              </ButtonLink>
+            }
+          >
+            We are working on technology designed to address practical needs.
+            Check back as we introduce our products.
+          </ProductsEmpty>
+        </Reveal>
       </div>
     </Section>
   )

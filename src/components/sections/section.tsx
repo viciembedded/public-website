@@ -1,5 +1,6 @@
 import type { ReactNode } from "react"
 
+import { Reveal } from "@/components/ui/reveal"
 import { cn } from "@/lib/utils"
 
 export function Container({
@@ -72,12 +73,9 @@ export function SectionHeading({
   className?: string
 }) {
   return (
-    <div className={cn("max-w-2xl", className)}>
+    <Reveal className={cn("max-w-2xl", className)}>
       {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-      <h2
-        id={id}
-        className="text-3xl font-semibold tracking-tight sm:text-4xl"
-      >
+      <h2 id={id} className="text-3xl font-semibold tracking-tight sm:text-4xl">
         {title}
       </h2>
       {children && (
@@ -85,6 +83,6 @@ export function SectionHeading({
           {children}
         </div>
       )}
-    </div>
+    </Reveal>
   )
 }

@@ -1,5 +1,6 @@
 import { Section } from "@/components/sections/section"
 import { ButtonLink } from "@/components/ui/button-link"
+import { Reveal } from "@/components/ui/reveal"
 
 export function CtaBand({
   title = "Have an idea that needs engineering?",
@@ -12,7 +13,7 @@ export function CtaBand({
 }) {
   return (
     <Section tone="dark" labelledBy="cta-heading" className="bg-navy-2">
-      <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+      <Reveal className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div className="max-w-2xl">
           <h2
             id="cta-heading"
@@ -27,7 +28,7 @@ export function CtaBand({
         <ButtonLink href="/contact" onDark className="self-start md:self-auto">
           {cta}
         </ButtonLink>
-      </div>
+      </Reveal>
     </Section>
   )
 }

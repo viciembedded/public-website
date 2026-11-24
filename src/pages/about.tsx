@@ -1,6 +1,7 @@
 import { CtaBand } from "@/components/sections/cta-band"
 import { PageHero } from "@/components/sections/page-hero"
 import { Section, SectionHeading } from "@/components/sections/section"
+import { Reveal } from "@/components/ui/reveal"
 import { usePageMeta } from "@/lib/use-page-meta"
 
 const differentiators = [
@@ -44,36 +45,43 @@ export function AboutPage() {
           cybersecurity and computer technology.
         </p>
         <p>
-          We bring hardware and software together to solve real-world
-          problems, develop products and support organizations with custom
-          engineering and development projects.
+          We bring hardware and software together to solve real-world problems,
+          develop products and support organizations with custom engineering and
+          development projects.
         </p>
       </PageHero>
 
       <Section labelledBy="who-heading">
         <div className="grid gap-10 md:grid-cols-[1fr_1.3fr] md:gap-16">
-          <h2 id="who-heading" className="text-3xl font-semibold tracking-tight sm:text-4xl">
-            Who we are
-          </h2>
-          <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
+          <Reveal>
+            <h2
+              id="who-heading"
+              className="text-3xl font-semibold tracking-tight sm:text-4xl"
+            >
+              Who we are
+            </h2>
+          </Reveal>
+          <Reveal
+            delay={0.1}
+            className="space-y-5 text-lg leading-relaxed text-muted-foreground"
+          >
             <p>
               At Vici Embedded, we see technology as more than a collection of
-              tools. It is a way to solve problems, improve processes and
-              create new possibilities.
+              tools. It is a way to solve problems, improve processes and create
+              new possibilities.
             </p>
             <p>
               Our work spans multiple areas of engineering and computing. We
-              develop our own technology products for the market and
-              collaborate with individuals, startups, businesses and
-              organizations that need technical expertise to bring their ideas
-              to life.
+              develop our own technology products for the market and collaborate
+              with individuals, startups, businesses and organizations that need
+              technical expertise to bring their ideas to life.
             </p>
             <p>
               By combining hardware and software engineering, we aim to create
               solutions that are functional, scalable and designed around
               practical needs.
             </p>
-          </div>
+          </Reveal>
         </div>
 
         <div className="mt-20 grid gap-10 md:grid-cols-2">
@@ -86,11 +94,17 @@ export function AboutPage() {
               title: "Our mission",
               text: "To transform ideas into practical technological solutions through engineering, innovation, research and continuous development, while making advanced technology more accessible and useful.",
             },
-          ].map((item) => (
-            <div key={item.title} className="border-l-2 border-primary pl-6">
-              <h2 className="text-xl font-semibold tracking-tight">{item.title}</h2>
+          ].map((item, index) => (
+            <Reveal
+              key={item.title}
+              delay={index * 0.1}
+              className="border-l-2 border-primary pl-6"
+            >
+              <h2 className="text-xl font-semibold tracking-tight">
+                {item.title}
+              </h2>
               <p className="mt-3 text-lg leading-relaxed">{item.text}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </Section>
@@ -100,19 +114,21 @@ export function AboutPage() {
           <SectionHeading id="approach-heading" title="Our approach">
             <p>
               We believe technology should go beyond theory. We focus on
-              designing, building, testing and delivering solutions that work
-              in the real world.
+              designing, building, testing and delivering solutions that work in
+              the real world.
             </p>
             <p className="mt-4">
               Whether it is a custom embedded device, a software application, a
               cybersecurity solution or an intelligent connected system, we
-              approach every project with engineering discipline, creativity
-              and a commitment to quality.
+              approach every project with engineering discipline, creativity and
+              a commitment to quality.
             </p>
           </SectionHeading>
 
-          <div>
-            <h3 className="text-sm font-semibold">What sets our approach apart</h3>
+          <Reveal delay={0.1}>
+            <h3 className="text-sm font-semibold">
+              What sets our approach apart
+            </h3>
             <dl className="mt-2">
               {differentiators.map((item) => (
                 <div key={item.title} className="border-b py-5 last:border-b-0">
@@ -125,7 +141,7 @@ export function AboutPage() {
                 </div>
               ))}
             </dl>
-          </div>
+          </Reveal>
         </div>
       </Section>
 

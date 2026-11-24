@@ -1,17 +1,23 @@
 import { Section } from "@/components/sections/section"
-import { Link } from "@/lib/router"
+import { Reveal } from "@/components/ui/reveal"
+import { Link } from "@/routes/router"
 
 export function Intro() {
   return (
     <Section labelledBy="intro-heading">
       <div className="grid gap-10 md:grid-cols-[1fr_1.3fr] md:gap-16">
-        <h2
-          id="intro-heading"
-          className="text-3xl font-semibold tracking-tight sm:text-4xl"
+        <Reveal>
+          <h2
+            id="intro-heading"
+            className="text-3xl font-semibold tracking-tight sm:text-4xl"
+          >
+            Technology built around real-world needs.
+          </h2>
+        </Reveal>
+        <Reveal
+          delay={0.1}
+          className="space-y-5 text-lg leading-relaxed text-muted-foreground"
         >
-          Technology built around real-world needs.
-        </h2>
-        <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
           <p>
             Vici Embedded is a technology and engineering company focused on
             designing, developing and delivering innovative technological
@@ -29,11 +35,11 @@ export function Intro() {
           </p>
           <Link
             href="/about"
-            className="inline-block rounded-sm font-medium text-primary underline underline-offset-4 outline-none hover:decoration-2 focus-visible:ring-3 focus-visible:ring-ring/50"
+            className="inline-block rounded-sm font-medium text-foreground underline decoration-primary decoration-2 underline-offset-4 outline-none hover:text-primary focus-visible:ring-3 focus-visible:ring-ring/50"
           >
             Learn About Vici Embedded
           </Link>
-        </div>
+        </Reveal>
       </div>
     </Section>
   )

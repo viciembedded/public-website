@@ -1,4 +1,7 @@
+import { m } from "motion/react"
+
 import { Section, SectionHeading } from "@/components/sections/section"
+import { easeOut, reveal } from "@/lib/motion"
 
 const steps = [
   {
@@ -26,11 +29,14 @@ const steps = [
 export function Approach() {
   return (
     <Section labelledBy="approach-heading">
-      <SectionHeading id="approach-heading" title="From idea to working solution.">
+      <SectionHeading
+        id="approach-heading"
+        title="From idea to working solution."
+      >
         <p>
           Our process is grounded in engineering, collaboration and continuous
-          improvement. We work to understand the challenge before selecting
-          the technology and approach best suited to the task.
+          improvement. We work to understand the challenge before selecting the
+          technology and approach best suited to the task.
         </p>
       </SectionHeading>
 
@@ -40,11 +46,24 @@ export function Approach() {
           aria-hidden="true"
           className="absolute top-5 right-[10%] left-5 hidden h-0.5 bg-border md:block"
         />
+        {/* Progress trace that runs through the steps as the section scrolls into view */}
+        <m.span
+          aria-hidden="true"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true, margin: "0px 0px -15% 0px" }}
+          transition={{ duration: 1.4, ease: easeOut, delay: 0.2 }}
+          className="absolute top-5 right-[10%] left-5 hidden h-0.5 origin-left bg-primary md:block"
+        />
         {steps.map((step, index) => (
-          <li key={step.title} className="relative flex gap-5 md:block">
+          <m.li
+            key={step.title}
+            {...reveal(0.2 + index * 0.18)}
+            className="relative flex gap-5 md:block"
+          >
             <span
               aria-hidden="true"
-              className="relative flex size-10 shrink-0 items-center justify-center rounded-full border-2 border-primary bg-background font-heading font-semibold text-primary"
+              className="relative flex size-10 shrink-0 items-center justify-center rounded-full bg-primary font-heading font-semibold text-primary-foreground"
             >
               {index + 1}
             </span>
@@ -56,7 +75,7 @@ export function Approach() {
                 {step.text}
               </p>
             </div>
-          </li>
+          </m.li>
         ))}
       </ol>
       <p className="mt-12 text-sm text-muted-foreground">

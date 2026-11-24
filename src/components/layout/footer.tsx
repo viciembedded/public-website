@@ -1,7 +1,7 @@
 import { Logo } from "@/components/brand/logo"
 import { navItems } from "@/components/layout/nav-items"
 import { Container } from "@/components/sections/section"
-import { Link } from "@/lib/router"
+import { Link } from "@/routes/router"
 
 const linkClass =
   "rounded-sm text-muted-foreground outline-none hover:text-foreground focus-visible:ring-3 focus-visible:ring-cyan/60"
@@ -17,8 +17,8 @@ export function Footer() {
           </p>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
             Vici Embedded is a technology and engineering company developing
-            practical solutions across embedded systems, software,
-            cybersecurity and connected technologies.
+            practical solutions across embedded systems, software, cybersecurity
+            and connected technologies.
           </p>
         </div>
 

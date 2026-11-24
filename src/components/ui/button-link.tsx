@@ -2,7 +2,7 @@ import type { ComponentProps } from "react"
 import type { VariantProps } from "class-variance-authority"
 
 import { buttonVariants } from "@/components/ui/button"
-import { Link } from "@/lib/router"
+import { Link } from "@/routes/router"
 import { cn } from "@/lib/utils"
 
 type ButtonLinkProps = ComponentProps<typeof Link> &

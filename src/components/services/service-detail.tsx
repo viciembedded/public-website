@@ -1,12 +1,24 @@
+import { m } from "motion/react"
+
 import { StatusBadge } from "@/components/ui/status-badge"
 import type { Service } from "@/content/services"
+import { reveal } from "@/lib/motion"
 
 export function ServiceDetail({ service }: { service: Service }) {
-  const { id, title, icon: Icon, status, summary, body, areasLabel, areas } =
-    service
+  const {
+    id,
+    title,
+    icon: Icon,
+    status,
+    summary,
+    body,
+    areasLabel,
+    areas,
+  } = service
 
   return (
-    <article
+    <m.article
+      {...reveal()}
       id={id}
       aria-labelledby={`${id}-title`}
       className="grid scroll-mt-24 gap-8 border-t py-14 first:border-t-0 first:pt-0 md:grid-cols-[1fr_1.4fr] md:gap-16"
@@ -46,6 +58,6 @@ export function ServiceDetail({ service }: { service: Service }) {
           </div>
         )}
       </div>
-    </article>
+    </m.article>
   )
 }
