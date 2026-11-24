@@ -26,3 +26,7 @@ dist-ssr
 # Local env files (contain secrets)
 .env
 .env.local
+
+# Claude Code and MCP local config
+.claude/
+.mcp.json
