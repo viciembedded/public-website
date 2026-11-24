@@ -30,3 +30,6 @@ dist-ssr
 # Claude Code and MCP local config
 .claude/
 .mcp.json
+
+# Planning docs
+vici-embedded-website-blueprint.md
