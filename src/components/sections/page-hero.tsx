@@ -5,9 +5,8 @@ import { Container, Eyebrow } from "@/components/sections/section"
 import { loadSequence } from "@/lib/motion"
 import { cn } from "@/lib/utils"
 
-/** Faint engineering-paper grid used behind dark hero areas. */
-export const gridBackdrop =
-  "bg-[linear-gradient(to_right,rgb(255_255_255/0.045)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.045)_1px,transparent_1px)] bg-[size:40px_40px]"
+/** Glow + fading grid behind dark hero areas (styles in index.css). */
+export const gridBackdrop = "hero-backdrop"
 
 export function PageHero({
   eyebrow,

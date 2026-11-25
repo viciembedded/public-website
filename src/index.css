@@ -71,3 +71,26 @@
     @apply font-heading text-balance;
     }
 }
+
+/* Dark hero backdrop: brand-colour glows plus an engineering grid that fades out toward the edges. */
+@layer components {
+    .hero-backdrop {
+        position: relative;
+        isolation: isolate;
+        background-image:
+            radial-gradient(ellipse 60% 55% at 85% 0%, color-mix(in oklab, var(--color-electric) 30%, transparent), transparent 70%),
+            radial-gradient(ellipse 45% 40% at 0% 100%, color-mix(in oklab, var(--color-cyan) 14%, transparent), transparent 70%);
+    }
+    .hero-backdrop::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background-image:
+            linear-gradient(to right, rgb(255 255 255 / 0.06) 1px, transparent 1px),
+            linear-gradient(to bottom, rgb(255 255 255 / 0.06) 1px, transparent 1px);
+        background-size: 40px 40px;
+        mask-image: radial-gradient(ellipse 75% 70% at 60% 35%, #000 25%, transparent 100%);
+    }
+}
